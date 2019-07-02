@@ -13,8 +13,8 @@
 // }
 // radio.forEach(radio => radio.addEventListener('change', radioPayment));
 // // radio.forEa.addEventListener('click', radioPayment());
-const amount = document.querySelector('.form__total');
-
+const amount = document.querySelector('.form__total span');
+console.log(amount);
 const inputs = Array.from(document.querySelectorAll('input[type="radio"]'));
 
 const annual = document.querySelector('input[value="Annually"]');
@@ -22,9 +22,9 @@ const monthly = document.querySelector('input[value="Monthly"]');
 
 function changeCost() {
   if (annual.checked === true) {
-    amount.textContent = '$300';
+    amount.textContent = '300';
   } else {
-    amount.textContent = '$30';
+    amount.textContent = '30';
   }
 }
 inputs.forEach(input => input.addEventListener('click', changeCost));
