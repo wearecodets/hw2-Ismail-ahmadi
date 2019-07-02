@@ -1,4 +1,4 @@
-const amount = document.querySelector('.form__total');
+const amount = document.querySelector('.form__total span');
 const subButton = document.querySelector('button[type="submit"]');
 
 const buttonAmount = document.querySelector('button span');
