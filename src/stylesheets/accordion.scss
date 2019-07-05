@@ -1,0 +1,51 @@
+.accordion {
+  position: relative;
+  margin-bottom: .35rem;
+  padding-left: 1rem;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &::before {
+    content: url(https://upload.wikimedia.org/wikipedia/commons/f/f5/Chevron_down_font_awesome.svg);
+    position: absolute;
+    left: -5px;
+    width: .65rem;
+    transform: rotate(-90deg);
+  }
+
+  &__question {
+    cursor: pointer;
+    font-weight: bold;
+    color: #222;
+
+    &:hover {
+      color: #4faca2;
+    }
+  }
+
+  &__answer {
+    color: #888;
+    max-height: 0;
+    opacity: 0;
+    transition: all .25s ease-in-out;
+  }
+
+  &--active {
+    margin-bottom: 1.25rem;
+
+    .accordion__question {
+      color: #4faca2;
+    }
+
+    .accordion__answer {
+      max-height: 500px;
+      opacity: 1;
+    }
+
+    &::before {
+      transform: rotate(0);
+    }
+  }
+}
