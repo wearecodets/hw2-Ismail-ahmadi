@@ -1,3 +1,15 @@
+
+const amount = document.querySelector('.form__total span');
+const subButton = document.querySelector('button[type="submit"]');
+
+const buttonAmount = document.querySelector('button span');
+// console.log(buttonAmount.textContent);
+// console.log(subButton.disabled);
+// console.log(amount);
+if (amount.textContent != '$0') {
+  subButton.disabled = false;
+  buttonAmount.textContent = amount.textContent;
+}
 // console.log('Hello, world!');
 // const total = document.querySelector('.form__total');
 // console.log(total);
@@ -13,8 +25,8 @@
 // }
 // radio.forEach(radio => radio.addEventListener('change', radioPayment));
 // // radio.forEa.addEventListener('click', radioPayment());
-const amount = document.querySelector('.form__total span');
-console.log(amount);
+// const amount = document.querySelector('.form__total span');
+// console.log(amount);
 const inputs = Array.from(document.querySelectorAll('input[type="radio"]'));
 
 const annual = document.querySelector('input[value="Annually"]');
@@ -37,7 +49,7 @@ function newFunction() {
 }
 accs.forEach(acc => acc.addEventListener('click', newFunction));
 console.log('Hello, world!');
-const amount = document.querySelector('.form__total span');
+// const amount = document.querySelector('.form__total span');
 // console.log(amount);
 const paypalLink = document.querySelector('a');
 // console.log(paypalLink.removeAttribute('href'));
